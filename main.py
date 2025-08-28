@@ -584,8 +584,8 @@ def process_video(video_path, model, num_frames_to_process, output_dir="output_f
     print(f"\nFinished processing {processed_count} frames.")
 
 if __name__ == "__main__":
-    model = YOLO('best.pt')
-    video_file = 'extract_45s-55s.mp4'
+    model = YOLO('models\best.pt')
+    video_file = 'inputs\extract_45s-55s.mp4'
     num_frames = 500
     
     process_video(video_file, model, num_frames)
