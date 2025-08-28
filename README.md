@@ -17,11 +17,13 @@ To run this script, you need to install the following Python libraries:
 Bash
 
 pip install opencv-python ultralytics numpy
-🧠 Model Source
+
+
+**🧠 Model Source**
 The model used in this project is a custom-trained YOLO model provided as bset.pt. The .pt extension stands for "PyTorch" and is a standard format for saving model weights. The file best.pt is a common naming convention used by the Ultralytics framework to denote the checkpoint that achieved the best performance during the training of the model. This is not a pre-trained model from a public dataset but a model specifically trained for your use case.
 
-💡 Usage
-Place your video file (extract_45s-57s.mp4) and the custom model file (bset.pt) in the same directory as the main.py script.
+**💡 Usage**
+Place your video file (e.g. extract_45s-57s.mp4) and the custom model file (best.pt) in the models directory.
 
 Run the script from your terminal:
 
@@ -39,8 +41,8 @@ For each frame, it runs the YOLO model to detect objects.
 
 It filters the detections to only consider objects labeled as 'person'.
 
-For each detected person, it crops the bounding box region and analyzes the average color of the central area to determine if the jersey is red or blue.
+For each detected person, it crops the bounding box region and analyzes the average color of the central area to determine.
 
-Based on the color analysis, it draws a bounding box around the person with a corresponding color (red, blue, or green for unknown).
+Based on the color analysis, it draws a bounding box around the person with a corresponding color.
 
 Finally, the annotated frame is saved as a .jpg image in the output_frames directory.
