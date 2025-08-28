@@ -7,4 +7,4 @@ inputs/*
 inputs/
 #models/
 *.mp4
-*.pt
+#*.pt
