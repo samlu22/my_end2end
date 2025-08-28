@@ -22,6 +22,18 @@ pip install opencv-python ultralytics numpy
 **🧠 Model Source**
 The model used in this project is a custom-trained YOLO model provided as bset.pt. The .pt extension stands for "PyTorch" and is a standard format for saving model weights. The file best.pt is a common naming convention used by the Ultralytics framework to denote the checkpoint that achieved the best performance during the training of the model. This is not a pre-trained model from a public dataset but a model specifically trained for your use case.
 
+--best.pt File Source
+The best.pt file is a model checkpoint generated during the training of a YOLO model using the Ultralytics framework. Specifically, it represents the weights of the model that achieved the highest performance (e.g., highest mAP) on the validation dataset during training. It is not a pre-trained model but a result of a training process.
+
+--Hugging Face Project
+The official Ultralytics YOLOv8 project on Hugging Face is the primary source for their models and is located at:
+
+Project Link: https://huggingface.co/Ultralytics/YOLOv8
+
+This is a comprehensive resource where you can find various pre-trained models (like yolov8n.pt, yolov8s.pt, etc.) and documentation for using them.
+
+
+
 **💡 Usage**
 Place your video file (e.g. extract_45s-57s.mp4) and the custom model file (best.pt) in the models directory.
 
@@ -33,7 +45,7 @@ python main.py
 The script will process the first 300 frames of the video and save the annotated images in a newly created directory called output_frames.
 
 ⚙️ How It Works
-The script initializes a YOLO model using the bset.pt file.
+The script initializes a YOLO model using the best.pt file.
 
 It reads the input video frame by frame.
 
